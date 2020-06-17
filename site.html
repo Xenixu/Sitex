@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .body {
+            display: flex;
+        }
+        .clearfix:before,  
+        .clearfix:after {  
+            content: " ";  
+            display: table;  
+        }  
+        .clearfix:after {  
+            clear: both;  
+        }  
+        .clearfix {  
+            *zoom: 1;  
+        }  
+
+        .header_nav a {
+                color: #fff;
+                display: inline-block;
+                width: 60%;
+                text-align: center;
+                text-shadow: 1px 1px 0px #67a6dd;
+            }
+            .header_nav_items a {
+                border-right: 1px solid #81056d;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+            .header_nav_items:last-child a {
+                border-right: 0;
+            }
+            .header_nav a:hover, .header_nav a:active {
+                background-color: cyan;
+            }
+            .header_nav a#pull {
+                display: none;
+            }
+        @media screen and (max-width: 767px) {
+            .header {
+                justify-items: auto;
+            }
+            .header_nav {
+                width: 80%;
+                display: list-item;
+                height: auto;
+            }
+            .header_nav_items {
+                width: 50%;
+                float: left;
+                position: relative;
+                text-align: justify;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .header_nav_items a {
+                border-bottom: 1px slateblue;
+                border-right: 1px slateblue;
+            }
+            .header_nav a {
+                text-align: left;
+                width: 100%;
+                text-indent: 20px;
+            }
+            .flexbox {
+                max-width: 50%;
+                justify-content: space-evenly;
+                font-size: 90%;
+            }
+            .flexbox1 {
+                max-width: 50%;
+                max-height: 5em;
+                font-style: italic;
+                font-size: 50%;
+            }
+            #img {max-width: 100%;height: auto;}
+            p {display: flex;}
+
+        }
+        @media only screen and (max-width: 480px) {
+            .header {
+                border-bottom: 0;
+
+            }
+            .header_nav {
+                display: none;
+                height: auto;
+            }
+            .header a#pull {
+                display: block;
+                background-color: slateblue;
+                width: 100%;
+                position: relative;
+            }
+            .header a#pull:after {
+                content: "";
+                background: url("") no-repeat;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+            }
+            
+        }
+         
+        .header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: turquoise;
+        }
+        .header_nav {
+            justify-items: flex;
+            margin-left: 200px;
+            max-width: 120px;
+
+        }
+        .header_nav_items {
+            display: flex;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            width: 120px;
+            height: 30px;
+            background-color: violet;
+            border-radius: 6px;
+            margin-right: 20px;
+            margin-left: 40px;
+        }
+        
+        .container2 {
+            background-color: rgb(155, 66, 243);
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+        .flexbox {
+           width: 400px;
+           background-color: rgb(49, 200, 238);
+           border-radius: 6px;
+           border-color: purple;
+        }
+        .container3 {
+            background-image: url(../Desktop/space.jpg);
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+       
+           
+        .box {
+            width: 40px;
+            height: 40px;
+            background-color: violet;
+            margin: 5px;
+        }
+        .flexbox1 {
+            display: flex;
+            background-color: blueviolet;
+            justify-content: space-evenly;
+            width: 60%;
+            height: 120px;
+            margin: auto;
+            border-radius: 6px;
+            border-color: purple;
+        }
+        .text {
+            color: rgb(60, 6, 85);
+        }   
+        .box2 {
+          width: 300px;
+          height: 100px;
+          background-color: rgb(144, 94, 238);
+          margin: auto;
+        }  
+        .text2 {
+            color: rgb(243, 17, 232);
+            font-style: italic;
+            font-size: larger;
+        }
+    </style>
+    <div class="header">
+        <div class="header_nav">
+            <div class="header_nav_items">
+                <div class="header_nav_items">
+                    <img src="../Desktop/im6.jpg" alt="apple" widht="30px" height="30px">
+                </div>
+                <div class="header_nav_items">Mac</div>
+                <div class="header_nav_items">iPhone</div>
+                <div class="header_nav_items">iPad</div>
+                <div class="header_nav_items">TV</div>
+                <div class="header_nav_items">Watch</div>
+                <div class="header_nav_items">Music</div>
+                <div class="header_nav_items">support</div>
+                <div class="header_nav_items" role="search" aria-label="Search apple.com">Search</div>
+                <div class="header_nav_items">Shop</div>
+                <a href="#" id="pull">Menu</a> 
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="flexbox">
+            <p class="text2" style="text-align: center">Action button</p>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="flexbox1">
+         <p class="text2" style="text-align: center"><h1>Action button</h1></p>
+        </div>
+   </div>
+</body>
+</html>
