@@ -1,6 +1,6 @@
 let admin="John"
 let name="John"
-alert(admin);
+alert(name);
 console.log (admin )
 
 let name="Ilia";
